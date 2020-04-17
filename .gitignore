@@ -31,5 +31,9 @@
 *.out
 *.app
 
+# Visual Studio
 .vs
 Debug
+
+# ImGui
+3dparty/imgui/*
