@@ -2,7 +2,10 @@
 	path = P3t4_ExGui/3dparty/imgui
 	url = https://github.com/ocornut/imgui
 
-
 [submodule "P3t4_ExGui/3dparty/SDL2"]
 	path = P3t4_ExGui/3dparty/SDL2
 	url = https://www.libsdl.org/download-2.0.php
+
+[submodule "P3t4_ExGui/3dparty/ImNodes"]
+	path = P3t4_ExGui/3dparty/ImNodes
+	url = https://github.com/rokups/ImNodes
