@@ -44,6 +44,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -88,10 +89,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Bym24v\Documents\GitHub\P3t4_ExGUI\3dparty\SDL2\include;C:\Users\Bym24v\Documents\GitHub\P3t4_ExGUI\3dparty\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Bym24v\Documents\GitHub\P3t4_ExGUI\3dparty\SDL2\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -100,10 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Bym24v\Documents\GitHub\P3t4_ExGUI\3dparty\SDL2\include;C:\Users\Bym24v\Documents\GitHub\P3t4_ExGUI\3dparty\imgui;C:\Users\Bym24v\Documents\GitHub\P3t4_ExGUI\3dparty\imgui\examples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Bym24v\Documents\GitHub\P3t4_ExGUI\3dparty\SDL2\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;OpenGL32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -139,7 +146,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\3dparty\imgui\imgui.cpp" />
+    <ClCompile Include="..\3dparty\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\3dparty\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\3dparty\imgui\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="..\3dparty\imgui\imgui_impl_sdl.cpp" />
+    <ClCompile Include="..\3dparty\imgui\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3dparty\imgui\imconfig.h" />
+    <ClInclude Include="..\3dparty\imgui\imgui.h" />
+    <ClInclude Include="..\3dparty\imgui\imgui_impl_opengl2.h" />
+    <ClInclude Include="..\3dparty\imgui\imgui_impl_sdl.h" />
+    <ClInclude Include="..\3dparty\imgui\imgui_internal.h" />
+    <ClInclude Include="P3Types.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
